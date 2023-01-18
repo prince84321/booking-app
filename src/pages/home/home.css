@@ -1,0 +1,19 @@
+.home-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.home-title{
+    width: 1024px;
+    font-size: 25px;
+}
+.copyright{
+    width: 1024px;
+    text-align: left !important;
+    padding-bottom: 10px;
+    font-size: 13px;
+
+}

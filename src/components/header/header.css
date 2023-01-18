@@ -1,0 +1,128 @@
+.header{
+    background-color: #003580;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+   
+    
+    
+}
+.header-container{
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0px 100px 0px;
+}
+.header-container.listMode{
+    margin: 20px 0px 0px 0px;
+}
+
+
+.header-item{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.header-itemList{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-itemList.active{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.header-description{
+    margin: 20px 0px;
+}
+
+.header-search{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid #febb02; 
+    background-color: white;  
+    padding: 10px 0px;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    max-width: 1024px;
+    border-radius: 5px;
+}
+.header-icon{
+    color: gray;
+}
+.header-searchItem{
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+   
+}
+.header-searchInput{
+    border: none;
+    outline: none;
+}
+
+.header-searchButton{
+    background-color: #003580;
+    color: white;
+    height: 50px;
+    width: 130px;
+    border: none;
+    cursor: pointer;
+    border: 3px solid #febb02; 
+}
+.date{
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+}
+.options{
+    position: absolute;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 3px 19px -1px rgba(66,63,66,1);
+    -moz-box-shadow: 1px 3px 19px -1px rgba(66,63,66,1);
+    box-shadow: 1px 3px 19px -1px rgba(66,63,66,1);
+    z-index: 2;
+}
+.option-item{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.option-itemList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+.button-container{
+    display: flex;
+    gap: 10px;
+    color: rgb(91, 89, 89);
+    align-items: center;
+    font-size: 13px;
+}
+.option-button{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #3c7dd7;
+    color: #3c7dd7;
+    cursor: pointer;
+}
+
+.option-button:disabled{
+    cursor: not-allowed;
+}
