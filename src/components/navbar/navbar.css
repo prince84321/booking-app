@@ -19,6 +19,11 @@
     font-size: x-large;
     cursor: pointer;
 }
+.logo-name{
+    text-decoration: none;
+    color: white;
+    
+}
 
 .navbar-item{
     display: flex;

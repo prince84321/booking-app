@@ -27,6 +27,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .header-itemList.active{
@@ -56,6 +57,10 @@
 .header-icon{
     color: gray;
 }
+.navlink-icon{
+    text-decoration: none;
+    color: white;
+}
 .header-searchItem{
     color: gray;
     display: flex;
@@ -71,13 +76,17 @@
 }
 
 .header-searchButton{
-    background-color: #003580;
+    background-color: #1b59af;
     color: white;
-    height: 50px;
-    width: 130px;
+    height: 49px;
+    width: 132px;
     border: none;
     cursor: pointer;
-    border: 3px solid #febb02; 
+    border: 3px solid #febb02;
+    border-left:6px solid #febb02 ;
+}
+.header-searchButton:hover{
+    background-color: #003580;
 }
 .date{
     position: absolute;

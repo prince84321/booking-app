@@ -6,7 +6,7 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { useState } from "react";
 import { format } from "date-fns";
-import {useNavigate} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
 function Header({type}) {
     const [destination, setDestination] = useState("")
@@ -44,7 +44,7 @@ function Header({type}) {
 
       const handleSearch = ()=>{
 
-        navigate("/hotel", {state:{destination, date, option}})
+        navigate("/list", {state:{destination, date, option}})
        
 
       }
@@ -55,11 +55,12 @@ function Header({type}) {
     <div className="header">
         <div className={type === "list" ? "header-container listMode" : "header-container"}>
             <div className="header-item">
-                
+            <NavLink to="/" className="navlink-icon" >  
             <div className="header-itemList active">
             <FontAwesomeIcon icon={faBed} />
             <span>Stays</span>
             </div>
+            </NavLink>
             <div className="header-itemList">
             <FontAwesomeIcon icon={faPlane} />
             <span>Flights</span>
@@ -104,7 +105,9 @@ function Header({type}) {
                  />}
             </div>
             <div className="header-searchItem" >
+                
                 <FontAwesomeIcon icon={faPerson} className="header-icon" />
+               
                 <span className="header-searchText" onClick={()=> setOpenOption(!openOption)} >
                     {`${option.adult} Adults . ${option.children} Children . ${option.rooms} Rooms`}
                 </span>
@@ -143,7 +146,7 @@ function Header({type}) {
                             <div className="button-container">
                             <button className="option-button"
                             disabled = {option.rooms <=1}
-                             onClick={()=> handleOption("rooms", "d")}>-</button>
+                            onClick={()=> handleOption("rooms", "d")}>-</button>
                             <span className="option-counter">{option.rooms}</span>
                             <button className="option-button" onClick={()=> handleOption("rooms", "i")} >+</button>
                             </div>

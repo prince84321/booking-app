@@ -5,6 +5,9 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
+import Hotellist from "../../components/hotel-list/Hotellist";
+import Subscribe from "../../components/subscribe/Subscribe";
+import Footer from "../../components/footer/Footer";
 
 
 
@@ -53,9 +56,16 @@ const [option, setOption] = useState(location.state.option);
              </button>
             </div>
 
-            <div className="list-hotel">asasasa</div>
+            <div className="list-hotel">
+            <Hotellist />
+            </div> 
           </div>
         </div>
+            <Subscribe />
+            <div className="hotel-list-footer">
+            <Footer />
+
+            </div>
       </div>
   )
 }
